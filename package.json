@@ -1,0 +1,16 @@
+{
+  "name": "tauri-app-template",
+  "version": "0.1.0",
+  "description": "A template for building desktop applications with Tauri",
+  "author": "Valmisson Grizorte <missongrizorte@gmail.com>",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.16.x"
+  }
+}
