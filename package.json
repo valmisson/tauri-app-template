@@ -13,12 +13,22 @@
     "build": "cd packages && tauri build",
     "dev:renderer": "cd packages/src-renderer && yarn dev",
     "build:renderer": "cd packages/src-renderer && yarn build",
+    "lint": "cd packages/src-renderer && yarn lint",
     "generate-icons": "cd packages && tauri icon src-tauri/app-icon.png",
     "postinstall": "yarn generate-icons"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@tauri-apps/cli": "^1.0.0-beta.1"
+    "@tauri-apps/cli": "^1.0.0-beta.1",
+    "lint-staged": "^11.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "packages/src-renderer/**/*.{js,ts}": [
+      "eslint --fix"
+    ]
   },
   "engines": {
     "node": ">=14.16.x"
