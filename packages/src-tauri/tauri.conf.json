@@ -4,10 +4,10 @@
     "version": "0.1.0"
   },
   "build": {
-    "distDir": "../src-renderer",
-    "devPath": "../src-renderer",
-    "beforeDevCommand": "",
-    "beforeBuildCommand": ""
+    "distDir": "../src-renderer/dist",
+    "devPath": "http://localhost:3000",
+    "beforeDevCommand": "yarn dev:renderer",
+    "beforeBuildCommand": "yarn build:renderer"
   },
   "tauri": {
     "bundle": {

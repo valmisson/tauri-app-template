@@ -11,6 +11,8 @@
   "scripts": {
     "dev": "cd packages && tauri dev",
     "build": "cd packages && tauri build",
+    "dev:renderer": "cd packages/src-renderer && yarn dev",
+    "build:renderer": "cd packages/src-renderer && yarn build",
     "generate-icons": "cd packages && tauri icon src-tauri/app-icon.png",
     "postinstall": "yarn generate-icons"
   },
