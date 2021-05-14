@@ -5,11 +5,19 @@
   "author": "Valmisson Grizorte <missongrizorte@gmail.com>",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/src-tauri",
+    "packages/src-renderer"
   ],
-  "scripts": {},
+  "scripts": {
+    "dev": "cd packages && tauri dev",
+    "build": "cd packages && tauri build",
+    "generate-icons": "cd packages && tauri icon src-tauri/app-icon.png",
+    "postinstall": "yarn generate-icons"
+  },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta.1"
+  },
   "engines": {
     "node": ">=14.16.x"
   }
