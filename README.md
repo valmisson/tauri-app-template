@@ -21,7 +21,7 @@ Click the **[Use this template][generate]** button.
 - Build smaller, faster, and more secure desktop applications with a web frontend
 
 ### Vite
-- [Vite][vite] is used to group all the source code of the renderer..
+- [Vite][vite] is used to group all the source code of the renderer.
 - Work easily with Vue, Svelte, React, etc.
 
 ### Typescript (optional)
