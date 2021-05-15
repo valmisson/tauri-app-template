@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ESNext",
     "module": "ESNext",
     "lib": [
@@ -17,7 +18,11 @@
     "noImplicitReturns": true,
     "types": [
       "vite/client"
-    ]
+    ],
+    "paths": {
+      "~/*": ["./*"],
+      "@src/*": ["src/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
