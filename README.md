@@ -71,6 +71,8 @@ Like the `yarn dev` command, the first time you run this, it will take some time
 
 This project is licensed under the MIT License - see [LICENSE][license] for more information.
 
+Copyright (c) 2021 Valmisson Grizorte.
+
 
 [tauri]: https://github.com/tauri-apps/tauri
 [tauri-docs]: https://tauri.studio/en/docs/getting-started/intro/#setting-up-your-environment
