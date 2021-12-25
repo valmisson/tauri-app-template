@@ -77,7 +77,7 @@ Copyright (c) 2021 Valmisson Grizorte.
 [tauri]: https://github.com/tauri-apps/tauri
 [tauri-docs]: https://tauri.studio/en/docs/getting-started/intro/#setting-up-your-environment
 [vite]: https://github.com/vitejs/vite
-[vite-templates]: https://github.com/vitejs/vite/tree/main/packages/create-app
+[vite-templates]: https://github.com/vitejs/vite/tree/main/packages/create-vite
 [typescript]: https://github.com/microsoft/TypeScript
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
