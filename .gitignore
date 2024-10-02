@@ -30,6 +30,3 @@ yarn-error.log*
 # will have compiled files and executables
 target
 WixTools
-
-# app icons
-icons

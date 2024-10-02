@@ -5,9 +5,10 @@
   },
   "build": {
     "distDir": "../src-renderer/dist",
-    "devPath": "http://localhost:3000",
+    "devPath": "http://localhost:8080",
     "beforeDevCommand": "yarn dev:renderer",
-    "beforeBuildCommand": "yarn build:renderer"
+    "beforeBuildCommand": "yarn build:renderer",
+    "withGlobalTauri": true
   },
   "tauri": {
     "bundle": {
@@ -28,13 +29,11 @@
       "shortDescription": "",
       "longDescription": "",
       "deb": {
-        "depends": [],
-        "useBootstrapper": false
+        "depends": []
       },
       "macOS": {
         "frameworks": [],
         "minimumSystemVersion": "",
-        "useBootstrapper": false,
         "exceptionDomain": "",
         "signingIdentity": null,
         "entitlements": null
