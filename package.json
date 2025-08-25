@@ -19,12 +19,12 @@
     "tauri": "cd packages && tauri"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.6.2",
-    "lint-staged": "^15.2.10",
-    "yorkie": "^2.0.0"
+    "@tauri-apps/cli": "^1.6.3",
+    "lint-staged": "^15.5.2",
+    "simple-git-hooks": "^2.13.1"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged"
   },
   "lint-staged": {
     "packages/src-renderer/src/**/*.{js,ts}": [

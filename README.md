@@ -17,7 +17,7 @@ Click the **[Use this template][generate]** button.
 ## Features
 
 ### Tauri
-- This template uses the latest versions of [Tauri][tauri] features.
+- This template uses [Tauri][tauri] v1 features.
 - Build smaller, faster, and more secure desktop applications with a web frontend
 
 ### Vite
