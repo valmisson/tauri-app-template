@@ -6,7 +6,7 @@ This is a template for building desktop applications with Tauri.
 
 * Read the [Tauri setup guide][tauri-docs]
 * Latest version of [Node][nodejs]
-* [Yarn][yarn] package manager (alternatively, [npm][npm])
+* [Bun][bun] package manager (alternatively, [npm][npm])
 
 ## Get Started
 
@@ -17,7 +17,7 @@ Click the **[Use this template][generate]** button.
 ## Features
 
 ### Tauri
-- This template uses [Tauri][tauri] v1 features.
+- This template uses the latest versions of [Tauri][tauri] features.
 - Build smaller, faster, and more secure desktop applications with a web frontend
 
 ### Vite
@@ -50,7 +50,7 @@ The structure of this template is very similar to the structure of a monorepo.
 ### Start Development
 
 ```bash
-yarn dev
+bun dev
 ```
 
 The first time you run this command, it will take several minutes for the Rust package manager to download and build all the required packages. Since they are cached, subsequent builds will be much faster, as only your code will need rebuilding.
@@ -60,18 +60,18 @@ Once Rust has finished building, the webview will open and it should display you
 ### App Publishing
 
 ```bash
-yarn build
+bun build
 ```
 
 This command will embed your web assets into a single binary with your Rust code. The binary itself will be located in `packages/src-tauri/target/release/[app name]`, and installers will be located in `packages/src-tauri/target/release/bundle/`.
 
-Like the `yarn dev` command, the first time you run this, it will take some time to collect the Rust crates and build everything - but on subsequent runs it will only need to rebuild your code, which is much quicker.
+Like the `bun dev` command, the first time you run this, it will take some time to collect the Rust crates and build everything - but on subsequent runs it will only need to rebuild your code, which is much quicker.
 
 ## License
 
 This project is licensed under the MIT License - see [LICENSE][license] for more information.
 
-Copyright (c) 2021 Valmisson Grizorte.
+Copyright (c) 2021-present, Valmisson Grizorte.
 
 
 [tauri]: https://github.com/tauri-apps/tauri
@@ -80,7 +80,7 @@ Copyright (c) 2021 Valmisson Grizorte.
 [vite-templates]: https://github.com/vitejs/vite/tree/main/packages/create-vite
 [typescript]: https://github.com/microsoft/TypeScript
 [nodejs]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
+[bun]: https://bun.com/
 [npm]: https://www.npmjs.com/
 [license]: https://github.com/valmisson/tauri-app-template/blob/main/LICENSE
 [src-tauri]: https://github.com/valmisson/tauri-app-template/tree/main/packages/src-tauri

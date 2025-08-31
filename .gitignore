@@ -8,8 +8,6 @@ dist
 .DS_*
 *.log
 logs
-yarn-debug.log*
-yarn-error.log*
 
 # dotenv environment variables file
 .env
@@ -18,6 +16,7 @@ yarn-error.log*
 
 # Optional cache directory
 .npm
+.bun
 .cache
 
 # Optional eslint cache
@@ -30,3 +29,4 @@ yarn-error.log*
 # will have compiled files and executables
 target
 WixTools
+gen

@@ -1,33 +1,30 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
 
-// https://vitejs.dev/config/
-export default defineConfig({
+// @ts-expect-error process is a nodejs global
+const host = process.env.TAURI_DEV_HOST
+
+// https://vite.dev/config/
+export default defineConfig(async () => ({
+
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
-  // prevent vite from obscuring rust errors
+  //
+  // 1. prevent Vite from obscuring rust errors
   clearScreen: false,
-  // to make use of `TAURI_DEBUG` and other env variables
-  // https://tauri.studio/v1/api/config#buildconfig.beforedevcommand
-  envPrefix: ['VITE_', 'TAURI_'],
-  build: {
-    // Tauri supports es2021
-    target: process.env.TAURI_PLATFORM === 'windows' ? 'chrome105' : 'safari13',
-    // don't minify for debug builds
-    minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
-    // produce sourcemaps for debug builds
-    sourcemap: !!process.env.TAURI_DEBUG
-  },
-  resolve: {
-    alias: {
-      '~': resolve(__dirname, './'),
-      '@src': resolve(__dirname, 'src')
-    }
-  },
+  // 2. tauri expects a fixed port, fail if that port is not available
   server: {
     port: 8080,
+    strictPort: true,
+    host: host || false,
+    hmr: host
+      ? {
+          protocol: 'ws',
+          host,
+          port: 8081
+        }
+      : undefined,
     watch: {
-      // 3. tell vite to ignore watching `src-tauri`
+      // 3. tell Vite to ignore watching `src-tauri`
       ignored: ['**/src-tauri/**']
     }
   }
-})
+}))

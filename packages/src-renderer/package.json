@@ -1,19 +1,21 @@
 {
   "name": "renderer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Valmisson Grizorte <valmisson.github.io>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src/**/*.{js,ts}"
+    "lint": "eslint src/**/*.ts"
   },
   "devDependencies": {
-    "@eslint/js": "^9.11.1",
     "eslint": "^9.34.0",
-    "globals": "^15.15.0",
-    "typescript": "^4.9.5",
-    "typescript-eslint": "^8.40.0",
-    "vite": "^4.5.14"
+    "eslint-config-std": "^1.0.0",
+    "eslint-plugin-n": "^17.21.3",
+    "globals": "^16.3.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.41.0",
+    "vite": "^7.1.3"
   }
 }
